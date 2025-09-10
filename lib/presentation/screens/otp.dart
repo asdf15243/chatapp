@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:chatapp/presentation/widgets/color_palette.dart';
 import 'package:chatapp/presentation/widgets/otp_text_field.dart';
 import 'package:chatapp/presentation/widgets/elevated_button.dart';
+import 'package:chatapp/presentation/screens/signup.dart';
 
 class OTPPage extends StatelessWidget {
   const OTPPage({super.key});
@@ -53,8 +54,12 @@ class OTPPage extends StatelessWidget {
               CustomElevatedButton(
                 text: 'Verify OTP',
                 onPressed: () {
-                  // Handle OTP verification
-                },
+                  // Navigate to ChatPage
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignupPage()),
+                  );
+                  },
               ),
             ],
           ),

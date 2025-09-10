@@ -5,6 +5,7 @@
     static ThemeData get darkTheme {
       return ThemeData(
         brightness: Brightness.dark,
+        splashFactory: NoSplash.splashFactory,
 
         // Define color scheme
         colorScheme: ColorScheme.dark(
@@ -47,6 +48,21 @@
           cursorColor: ColorPalette.textPrimary, // white cursor
           selectionColor: ColorPalette.textPrimary.withOpacity(0.3), // light white/grey highlight
           selectionHandleColor: ColorPalette.textPrimary, // slightly darker handle
+        ),
+
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all(ColorPalette.textPrimary),
+            overlayColor: MaterialStateProperty.resolveWith((states) {
+              if (states.contains(MaterialState.pressed) ||
+                  states.contains(MaterialState.hovered) ||
+                  states.contains(MaterialState.focused)) {
+                return ColorPalette.textPrimary.withOpacity(0.2); // subtle highlight
+              }
+              return null;
+            }),
+            splashFactory: NoSplash.splashFactory, // removes ripple effect
+          ),
         ),
 
         // SnackBar styling

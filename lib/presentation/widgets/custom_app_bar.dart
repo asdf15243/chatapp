@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'color_palette.dart';
+import '../screens/profile.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;
@@ -30,7 +31,10 @@ class CustomAppBar extends StatelessWidget {
           if (showProfileIcon)
             IconButton(
               onPressed: () {
-                // profile click action
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                );
               },
               icon: const CircleAvatar(
                 radius: 16,

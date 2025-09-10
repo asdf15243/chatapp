@@ -12,7 +12,7 @@ class CustomTextField extends StatelessWidget {
       hintText: hint,
       hintStyle: TextStyle(color: ColorPalette.textSecondary),
       filled: true,
-      fillColor: ColorPalette.inputFill,
+      fillColor: ColorPalette.background,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide(color: ColorPalette.inputBorder),

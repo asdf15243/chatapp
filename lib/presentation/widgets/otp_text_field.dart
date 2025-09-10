@@ -60,12 +60,10 @@ class _OTPTextFieldState extends State<OTPTextField>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: digit.isEmpty
-                    ? ColorPalette.inputBorder
-                    : ColorPalette.buttonBackground,
+                color: ColorPalette.inputBorder, // always white (or whatever you define)
                 width: 2,
               ),
-              color: ColorPalette.inputFill,
+              color: ColorPalette.background,
             ),
             child: Text(
               digit,

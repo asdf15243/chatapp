@@ -52,7 +52,7 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ChatPage(), // navigate to OTP page
+                      builder: (context) => const OTPPage(), // navigate to OTP page
                     ),
                   );
                 },
