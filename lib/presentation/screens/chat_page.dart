@@ -31,6 +31,7 @@ class _ChatPageState extends State<ChatPage> {
             CustomAppBar(
               title: 'Chats are secure',
               showProfileIcon: true,
+              showAllUsersIcon: true,
             ),
 
             const SizedBox(height: 16),
